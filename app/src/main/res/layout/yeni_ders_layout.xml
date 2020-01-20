@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="@+id/spnYeniDersNot"
+    app:layout_constraintStart_toEndOf="@+id/spnYeniDersNot">
+
+
+    <Spinner
+        android:id="@+id/spnYeniDersNot"
+        android:layout_width="165dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="24dp"
+        android:entries="@array/Notlar"
+        app:layout_constraintEnd_toStartOf="@+id/spnYeniKredi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spnYeniKredi" />
+
+    <Spinner
+        android:id="@+id/spnYeniKredi"
+        android:layout_width="187dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/Krediler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spnYeniDersNot"
+        app:layout_constraintTop_toBottomOf="@+id/btnSil" />
+
+    <AutoCompleteTextView
+        android:id="@+id/etYeniDers"
+        android:layout_width="244dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="22dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/spnYeniDersNot"
+        app:layout_constraintEnd_toStartOf="@+id/btnSil"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSil"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btndel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etYeniDers"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnYeniKredi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
